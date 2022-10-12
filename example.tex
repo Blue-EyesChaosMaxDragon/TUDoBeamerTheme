@@ -5,7 +5,7 @@
 
 % Load packages you need here
 \usepackage{polyglossia}
-\setmainlanguage{german}
+\setmainlanguage{english}
 
 \usepackage{csquotes}
     
@@ -16,6 +16,19 @@
 
 \usepackage{hyperref}
 \usepackage{bookmark}
+
+% Custom packages
+\usepackage[locale=US, separate-uncertainty=true, per-mode=symbol-or-fraction]{siunitx}
+\usepackage[]{braket}
+\usepackage{appendixnumberbeamer}
+\usepackage[percent]{overpic}
+\usepackage{tikz}
+%\usepackage{amsbsy}
+\usepackage{multirow}
+\usepackage{pifont}
+\usepackage{emoji}
+
+\usetikzlibrary{positioning}
 
 % load the theme after all packages
 
@@ -31,6 +44,11 @@
   partial=upright,
   mathrm=sym,
 }
+
+% Custom commands
+\newcommand{\uproman}[1]{\uppercase\expandafter{\romannumeral#1}}
+\newcommand{\cmark}{\textcolor{green}{\ding{51}}}
+\newcommand{\xmark}{\textcolor{red}{\ding{55}}}
 
 \title{\LaTeX-Beamer-Theme der TU~Dortmund}
 \author[M.~Nöthe]{Maximilian Nöthe}
