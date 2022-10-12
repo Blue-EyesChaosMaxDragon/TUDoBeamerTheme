@@ -44,8 +44,8 @@
       BoldFont=FiraSans Medium,
     ]
   }
-  \setmonofont{Fira Mono}[Scale=MatchLowercase]
-  \setmathfont{Fira Math}[Scale=MatchLowercase]
+  \setmonofont{Latin Modern Math}[Scale=MatchLowercase]
+  \setmathfont{Latin Modern Math}[Scale=MatchLowercase]
 \else
   \usepackage{FiraSans} 
 \fi
@@ -55,7 +55,7 @@
 
 %% headline
 \newlength{\headerheight}
-\setlength{\headerheight}{0.08\paperheight}
+\setlength{\headerheight}{0.06\paperheight}
 \setbeamertemplate{headline}
 {%
   \vspace*{10pt}%
@@ -68,14 +68,17 @@
   ]{headline}%
     \includegraphics[height=\headerheight]{logos/tu.pdf}%
   \end{beamercolorbox}%
-  \begin{beamercolorbox}[
-    wd=0.65\paperwidth,
-    ht=\headerheight,
-    leftskip=1em,
-    rightskip=\beamer@rightmargin,
-  ]{headline}%
-  \usebeamerfont{institute in head/foot}\hfill\insertshortinstitute[respectlinebreaks]
-  \end{beamercolorbox}%
+
+  % Optional: show institue in right corner
+  %\begin{beamercolorbox}[
+  %  wd=0.65\paperwidth,
+  %  ht=\headerheight,
+  %  leftskip=1em,
+  %  rightskip=\beamer@rightmargin,
+  %]{headline}%
+  %\usebeamerfont{institute in head/foot}\hfill\insertshortinstitute[respectlinebreaks]
+  %\end{beamercolorbox}%
+
   \vskip2ex%
   \ifnum\insertframenumber=1%
     \vspace{0.4pt}%
@@ -132,7 +135,7 @@
       dp=10pt,
       rightskip=\beamer@rightmargin,
     ]{frame}%
-      \raggedleft%
+      \hfill%
       \usebeamerfont{framenumber}\insertframenumber%
       \if@showtotalframes%
       ~/~\inserttotalframenumber%
