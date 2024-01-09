@@ -140,10 +140,13 @@
       ht=4ex,
       dp=10pt,
     ]{frame}%
-      \raggedleft%
-      \usebeamerfont{framenumber}\insertframenumber%
-      \if@showtotalframes%
-      ~/~\inserttotalframenumber%
+      \ifnum\insertframenumber=0% remomve frame nunmbers in appendix
+      \else
+        \raggedleft%
+        \usebeamerfont{framenumber}\insertframenumber%
+        \if@showtotalframes%
+        ~/~\inserttotalframenumber%
+        \fi%
       \fi%
     \end{beamercolorbox}%
   \fi%
