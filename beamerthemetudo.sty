@@ -18,6 +18,7 @@
 \DeclareOption{showappendixframes}{\@showappendixframestrue}
 
 \newcounter{insideappendix}
+\newcommand*\appendixfootline{\section{}\setcounter{insideappendix}{1}}
 
 \newif\if@dark\@darkfalse
 \DeclareOption{dark}{\@darktrue}
