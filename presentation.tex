@@ -33,7 +33,9 @@
 % load the theme after all packages
 
 \usetheme[
+  showframes, % show number of frames in the footline
   showtotalframes, % show total number of frames in the footline
+  showappendixframes, % show number of frames in the footline of the appendix
   % dark, % optional dark theme, uncomment to use
 ]{tudo}
 
@@ -112,12 +114,14 @@
 \end{frame}
 
 \appendix
+\section{} % needed because of footline template
+\setcounter{insideappendix}{1}
 
-\begin{frame}[noframenumbering]{Appendix}
+\begin{frame}{Appendix}
   This is the first appendix page.
 \end{frame}
 
-\begin{frame}[noframenumbering]{Appendix}
+\begin{frame}{Appendix}
   This is the second appendix page.
 \end{frame}
 
